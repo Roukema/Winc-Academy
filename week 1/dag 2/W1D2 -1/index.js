@@ -1,0 +1,14 @@
+console.log("Hello Winc Academy");
+let naam = "Matthijs";
+let achternaam = "Roukema";
+console.log(naam + " " + achternaam);
+let cursusWeken = 6;
+let dagenInWeek = 5;
+const cursusDagen = cursusWeken * dagenInWeek;
+let dagenBezig = 2;
+let dagenTeGaan = cursusDagen - dagenBezig;
+console.log("aantal cursusdagen nog te gaan: " + dagenTeGaan);
+let leeftijd = 27;
+typeof leeftijd;
+console.log("leeftijd = " + leeftijd);
+console.log(typeof leeftijd);

@@ -1,0 +1,76 @@
+const randomNumber = function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+const guess = function inGuess() {
+  return parseInt(prompt("vul in", "def"), 10);
+};
+/*  
+var guesses = document.querySelector('.guesses');
+var lastResult = document.querySelector('.lastResult');
+var lowOrHi = document.querySelector('.lowOrHi');
+var guessSubmit = document.querySelector('.guessSubmit');
+var guessField = document.querySelector('.guessField');
+var guessCount = 1;
+var resetButton;
+*/
+
+function checkGuess() {
+  var userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = "Vorige gok: ";
+  }
+
+  guesses.textContent += userGuess + " ";
+
+  if (userGuess === randomNumber) {
+    lastResult.textContent = "Hartelijk gefeliciteerd! Je hebt het goed!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
+    setGameOver();
+  } else if (guessCount === 10) {
+    lastResult.textContent = "!!!GAME OVER!!!";
+    lowOrHi.textContent = "";
+    setGameOver();
+  } else {
+    lastResult.textContent = "Fout!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "Laatste gok was te laag!";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "Laatste gok was te hoog!";
+    }
+  }
+
+  guessCount++;
+  guessField.value = "";
+}
+
+guessSubmit.addEventListener("click", checkGuess);
+
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start nieuw spel";
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener("click", resetGame);
+}
+
+function resetGame() {
+  guessCount = 1;
+  var resetParas = document.querySelectorAll(".resultParas p");
+  for (var i = 0; i < resetParas.length; i++) {
+    resetParas[i].textContent = "";
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = "";
+  guessField.focus();
+  lastResult.style.backgroundColor = "white";
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
