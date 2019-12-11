@@ -8,7 +8,7 @@ const findSpiderMan = function(object) {
   return object.name === "Spiderman";
 };
 
-console.log(superheroes.find(findSpiderMan));
+console.log(superheroes.filter(findSpiderMan));
 // Find Spiderman
 // result should be: {name: "Spiderman", alter_ego: "Peter Parker"}
 // const superheroes = [
