@@ -174,7 +174,7 @@ console.log(typeof superheroes[1].weight);
 const gewichtDC = superheroes.filter(DC).reduce((accumulator, hero) => {
   return accumulator + hero.weight;
 }, 0);
-console.log("gewicht DC " + gewichtDC);
+console.log("gewicht DC: " + gewichtDC);
 
 const gewichtMarvel = superheroes.filter(Marvel).reduce((accumulator, hero) => {
   return accumulator + hero.weight;

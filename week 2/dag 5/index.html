@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Matthijs en zijn weg naar Front-end Developer"
+    />
+    <title>Movie Database Matthijs</title>
+  </head>
+  <body>
+    <header id="Home">
+      <h1>
+        Movie Database
+        <img
+          src="https://emoji.slack-edge.com/TNSE21WG7/mario-luigi-dance/3e724c78ac74fa97.gif"
+        />
+      </h1>
+    </header>
+    <nav>
+      <ul>
+        <input
+          id="nieuwsteFilms"
+          type="radio"
+          name="buttons"
+          value="nieuwsteFilms"
+        /><label for="nieuwsteFilms"> 2014 of nieuwer</label>
+        <input
+          id="Avengers"
+          type="radio"
+          name="buttons"
+          value="Avengers"
+        /><label for="Avengers"> Avengers</label>
+        <input id="X-Men" type="radio" name="buttons" value="X-Men" /><label
+          for="X-Men"
+        >
+          X-Men.</label
+        >
+        <input
+          id="Princess"
+          type="radio"
+          name="buttons"
+          value="Princess"
+        /><label for="Princess"> Princess</label>
+        <input id="Batman" type="radio" name="buttons" value="Batman" /><label
+          for="Batman"
+        >
+          Batman</label
+        >
+      </ul>
+    </nav>
+    <main id="main">
+      <ul id="list"></ul>
+    </main>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
