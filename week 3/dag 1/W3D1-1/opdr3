@@ -1,0 +1,29 @@
+a
+de html van de pagina wincacademy
+server is Apache
+
+b
+{
+  "args": {
+    "": ""
+  },
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Cache-Control": "no-cache",
+    "Content-Length": "0",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "Postman-Token": "0559f1bd-1e3a-4cbe-8299-a6fdb4b6da65",
+    "User-Agent": "PostmanRuntime/7.20.1"
+  },
+  "json": null,
+  "origin": "77.169.35.98, 77.169.35.98",
+  "url": "https://httpbin.org/post?="
+}
+
+2.
+404 page not found

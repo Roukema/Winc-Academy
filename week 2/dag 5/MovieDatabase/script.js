@@ -63,8 +63,8 @@ const EventListener = () => {
 const addHomeEvent = () => {
   const Home = document.getElementById("Home");
   Home.addEventListener("click", () => addMoviesToDom(allMovies));
-  //   Home.onclick = () => {
-  //     addMoviesToDom(allMovies);
+  //Home.onclick = addMoviesToDom(allMovies); zou ook moeten werken, liever niet
+  //Home.addEventListener("click", addMoviesToDom(allMovies) ) werkt niet
 };
 // console.log(NewestMovies);
 document.addEventListener("DOMContentLoaded", event => {
