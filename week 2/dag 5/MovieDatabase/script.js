@@ -9,13 +9,17 @@ const addMoviesToDom = array => {
 
   array.forEach(movie => {
     {
-      let node = document.createElement("LI"); // create a li for each movie
+      let node = document.createElement("li"); // create a li for each movie
       let linknode = document.createElement("a"); // create a link
       let imgnode = document.createElement("img"); // create a img for each movie
       linknode.href = " https://www.imdb.com/title/" + movie.imdbID;
       imgnode.src = movie.Poster; // set src for each movie
-      node.appendChild(linknode).appendChild(imgnode); // make img child of li
-      document.getElementById("list").appendChild(node); // make li child of ul
+      // node.appendChild(linknode).appendChild(imgnode); // make img child of li
+      document
+        .getElementById("list")
+        .appendChild(node)
+        .appendChild(linknode)
+        .appendChild(imgnode); // make li child of ul
     }
   });
 };
