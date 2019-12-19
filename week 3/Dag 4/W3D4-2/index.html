@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Matthijs en zijn weg naar Front-end Developer"
+    />
+    <title>cocktail API</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <label for="cocktailNameInput">welke cocktail?</label>
+      <input type="text" maxlength="40" id="cocktailNameInput" /><button
+        id="cocktailNameButton"
+      >
+        Search
+      </button>
+      <label for="ingredientNameInput"> OF welk ingredient?</label>
+      <input
+        type="text"
+        maxlength="40"
+        id="ingredientNameInput"
+        name="ingredientNameInput"
+      /><button id="ingredientNameButton">
+        Search
+      </button>
+    </nav>
+    <div id="Container"></div>
+
+    <script type="text/javascript" src="api-client.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

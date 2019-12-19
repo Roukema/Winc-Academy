@@ -26,7 +26,7 @@ function initMap() {
       icon: icons.WincLogo.icon,
       map: map
     });
-    return Marker;
+    return Marker, (Marker.id = "marker");
   };
 
   const places = [
