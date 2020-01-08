@@ -1,4 +1,4 @@
-const API_KEY = "b69dd96bca8126fbcabbf049bfadff42";
+const API_KEY = ;
 const getData = async () => {
   try {
     const apiUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`;
