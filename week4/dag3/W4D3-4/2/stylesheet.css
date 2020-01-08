@@ -1,0 +1,10 @@
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+div:hover {
+  width: 300px;
+  transition: 2s width cubic-bezier(0.78, 0.09, 0.28, 0.86);
+}

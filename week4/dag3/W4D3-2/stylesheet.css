@@ -1,0 +1,24 @@
+a.hover:hover {
+  color: lightblue;
+}
+a.active:active {
+  color: red;
+}
+a.visited:visited {
+  color: yellow;
+}
+a.focus:focus {
+  color: purple;
+}
+div.hover:hover {
+  color: lightblue;
+}
+div.active:active {
+  color: red;
+}
+div.visited:visited {
+  color: yellow;
+}
+div.focus:focus {
+  color: purple;
+}
