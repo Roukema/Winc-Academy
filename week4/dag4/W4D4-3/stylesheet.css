@@ -30,6 +30,7 @@ body {
 #uitslag.true {
   display: block;
   background-color: greenyellow;
+  color: black;
 }
 #uitslag.false {
   display: block;

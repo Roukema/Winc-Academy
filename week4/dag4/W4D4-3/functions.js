@@ -76,7 +76,7 @@ let passwordCountRequirement = () => {
 
 let passwordHasMoreThan3Requirements = password => {
   passwordCountRequirement();
-  console.log(passwordCountRequirement);
+
   if (PasswordRequirementsTrue >= 3 && password1Lowercase === true) {
     console.log("wachtwoord is oke hollee holleee");
     passwordHas3Requirements = true;
@@ -136,7 +136,10 @@ const createHints = () => {
   }
   if (passwordHas3Requirements === true) {
     document.getElementById("uitslag").className = true;
-    console.log("passwordHas3Requirements true");
+    document
+      .getElementById("uitslag")
+      .appendChild(document.createElement("h3")).innerHTML =
+      "wachtwoord is oke hollee holleee";
   } else if (passwordHas3Requirements === false) {
     document.getElementById("uitslag").className = false;
   }
