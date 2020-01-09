@@ -6,7 +6,7 @@ const {
   passwordVerifier1Number,
   passwordHasMoreThan3Requirements
 } = require("./functions.js");
-const myPasword = "BIER23";
+const myPasword = "Vier4";
 
 test("Not more then 8 characters", function() {
   const output = passwordVerifierLength(myPasword);
