@@ -3,7 +3,7 @@ const addOne = function(numbers) {
   return numbers.map(number => number + 1);
 };
 
-const getWordLengths = function(someWords) {
+const wordLengths = function(someWords) {
   //Schrijf je functie...
   return someWords.map(word => word.length);
 };
@@ -12,6 +12,4 @@ const findNeedle = (words, word) => {
   return words.indexOf(word);
 };
 
-// module.exports = getWordLengths;
-// module.exports = addOne;
-module.exports = findNeedle;
+module.exports = { addOne, wordLengths, findNeedle };

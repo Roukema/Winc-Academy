@@ -1,4 +1,4 @@
-const addOne = require("./functions.js");
+const { addOne, wordLengths, findNeedle } = require("./functions.js");
 
 test("Add 1 to each item in myArray", function() {
   const myArray = [31, 57, 12, 5];
@@ -11,7 +11,6 @@ test("Add 1 to each item in myArray", function() {
   expect(myArray).toEqual(unchanged);
 });
 
-const wordLengths = require("./functions.js");
 test("Get word lengths", function() {
   const words = ["sun", "potato", "roundabout", "pizza"];
   const expected = [3, 6, 10, 5];
@@ -20,12 +19,10 @@ test("Get word lengths", function() {
   expect(output).toEqual(expected);
 });
 
-const findTheNeedle = require("./functions.js");
-
 test("Find the needle", function() {
   const words = ["house", "train", "slide", "needle", "book"];
   const expected = 3;
 
-  const output = findTheNeedle(words, "needle");
+  const output = findNeedle(words, "needle");
   expect(output).toEqual(expected);
 });
