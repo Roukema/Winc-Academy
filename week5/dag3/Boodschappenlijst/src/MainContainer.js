@@ -20,16 +20,16 @@ class MainContainer extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     console.log("shopping items", this.state);
-    // this.AddItem = this.AddItem.bind(this);
+    this.AddItem = this.AddItem.bind(this);
   }
   handleChange(event) {
-    console.log(event.target);
-    let target = event.target;
+    let target = event.target.getAtribute("value");
+    console.log(target);
     this.AddItem(target);
   }
   AddItem = target => {
     this.setState({
-      shoppingItems: [...this.state.shoppingItems, target.value]
+      shoppingItems: [...this.state.shoppingItems, { target }]
     });
     console.log(this.state);
   };
