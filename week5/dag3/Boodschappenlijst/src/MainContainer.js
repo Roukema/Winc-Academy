@@ -7,7 +7,7 @@ class MainContainer extends Component {
     super(props);
     this.state = {
       groceryItems: [
-        { id: 1, title: "pizza", onClick: this.handleChange },
+        { id: 1, title: "pizza" },
         { id: 2, title: "kaas" },
         { id: 3, title: "klaas" }
       ],
@@ -19,12 +19,21 @@ class MainContainer extends Component {
       ]
     };
     this.handleChange = this.handleChange.bind(this);
+    console.log("shopping items", this.state);
+    // this.AddItem = this.AddItem.bind(this);
   }
   handleChange(event) {
-    console.log(event);
+    console.log(event.target);
+    let target = event.target;
+    this.AddItem(target);
   }
-
-  //   const { name, value, type, checked } = event.target;
+  AddItem = target => {
+    this.setState({
+      shoppingItems: [...this.state.shoppingItems, target.value]
+    });
+    console.log(this.state);
+  };
+  //
   //   type === "checkbox"
   //     ? this.setState({ [name]: checked })
   //     : this.setState({ [name]: value });
@@ -38,7 +47,7 @@ class MainContainer extends Component {
     return (
       <div id="mainContainer">
         <h3>Boodschappen</h3>
-        <GroceryList item={sentList} />
+        <GroceryList item={sentList} onClick={this.handleChange} />
         <h3>Winkelwagen</h3>
         <ShoppingCart item={sentShoppingList} />
       </div>

@@ -4,14 +4,13 @@ import GroceryListItem from "./GroceryListItem";
 class GroceryList extends Component {
   constructor(props) {
     super(props);
-    this.state = props.item;
+    this.state = props;
   }
 
   render() {
-    const groceryItemsArray = this.state;
-
+    const groceryItemsArray = this.state.item;
     const groceryListItems = groceryItemsArray.map(item => (
-      <GroceryListItem item={item} key={item.id} onClick={item.onClick} />
+      <GroceryListItem item={item} key={item.id} onClick={this.state.onClick} />
     ));
     return <ul>{groceryListItems}</ul>;
   }

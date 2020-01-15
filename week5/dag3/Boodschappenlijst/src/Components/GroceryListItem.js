@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class GroceryListItem extends Component {
   constructor(props) {
     super(props);
-    this.state = props.item;
+    this.state = props;
   }
   render() {
-    return <li>{this.state.title}</li>;
+    return <li onClick={this.state.onClick}>{this.state.item.title}</li>;
   }
 }
 
