@@ -1,0 +1,70 @@
+body {
+  background-color: gray;
+}
+.header {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+}
+.header p {
+  text-align: start;
+}
+.footer {
+  background-color: gray;
+  color: whitesmoke;
+  padding: right 0;
+}
+.footer p {
+  text-align: center;
+}
+.mainContainer {
+  display: grid;
+  background-color: gray;
+  grid-template: 1fr/1fr 2fr 2fr 1fr;
+}
+.groceryList {
+  grid-column-start: 2;
+  padding: 10px;
+  display: block;
+  background-color: lightgray;
+}
+.shoppingCart {
+  display: block;
+  padding: 10px;
+  background-color: lightgray;
+}
+.listItems {
+  list-style: none;
+  text-align: start;
+  padding-left: 0;
+}
+
+.groceryList ul {
+  padding-left: 0px;
+}
+.shoppingCart ul {
+  padding-left: 0px;
+}
+.groceryList li:nth-child(odd) {
+  cursor: pointer;
+  background-color: hsla(183, 77%, 61%, 0.5);
+}
+.groceryList li:nth-child(even) {
+  cursor: pointer;
+  background-color: hsla(183, 77%, 41%, 0.5);
+}
+.groceryList li:nth-child(odd):hover {
+  background-color: hsla(183, 77%, 61%, 1);
+}
+.groceryList li:nth-child(even):hover {
+  background-color: hsla(183, 77%, 61%, 1);
+}
+.shoppingCart li:nth-child(odd) {
+  background-color: hsla(120, 65%, 70%, 0.459);
+}
+.shoppingCart li:nth-child(even) {
+  background-color: hsla(120, 65%, 40%, 0.5);
+}
+#resetShoppingCart {
+  display: block;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GroceryList from "./Components/GroceryList";
 import ShoppingCart from "./Components/ShoppingCart";
-
+import InputField from "./Components/InputField";
 class MainContainer extends Component {
   constructor(props) {
     super(props);
@@ -19,37 +19,46 @@ class MainContainer extends Component {
       ]
     };
     this.handleChange = this.handleChange.bind(this);
-    console.log("shopping items", this.state);
     this.AddItem = this.AddItem.bind(this);
   }
   handleChange(event) {
-    let target = event.target.getAtribute("value");
-    console.log(target);
-    this.AddItem(target);
+    let target = event.target;
+    let item = this.state.groceryItems.find(item =>
+      item.id == target.id ? item.title : null
+    );
+
+    this.AddItem(item);
+    this.removeItem(target);
   }
-  AddItem = target => {
+  AddItem = item => {
     this.setState({
-      shoppingItems: [...this.state.shoppingItems, { target }]
+      shoppingItems: [...this.state.shoppingItems, item]
     });
-    console.log(this.state);
   };
-  //
-  //   type === "checkbox"
-  //     ? this.setState({ [name]: checked })
-  //     : this.setState({ [name]: value });
+  removeItem = target => {
+    this.setState(state => {
+      let groceryItems = state.groceryItems.filter(
+        item => item.id != target.id
+      );
+      return { groceryItems };
+    });
+  };
+  emptyCart = () => {
+    this.setState({ shoppingItems: [] });
+  };
 
   render() {
-    // const ShoppingCart = this.state.shoppingItems.map(item => (
-    //   <GroceryList item={item} key={item.id} value={item.title} />
-    // ));
     const sentList = this.state.groceryItems;
     const sentShoppingList = this.state.shoppingItems;
     return (
-      <div id="mainContainer">
-        <h3>Boodschappen</h3>
+      <div className="mainContainer">
+        <InputField />
         <GroceryList item={sentList} onClick={this.handleChange} />
-        <h3>Winkelwagen</h3>
+
         <ShoppingCart item={sentShoppingList} />
+        <button id="resetShoppingCart" onClick={this.emptyCart}>
+          Leeg Winkelwagen
+        </button>
       </div>
     );
   }

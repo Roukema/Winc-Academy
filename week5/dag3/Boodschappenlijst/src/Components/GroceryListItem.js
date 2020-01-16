@@ -3,11 +3,14 @@ import React, { Component } from "react";
 class GroceryListItem extends Component {
   constructor(props) {
     super(props);
-    console.log("hier zijn je props", props);
   }
   render() {
     return (
-      <li onClick={this.props.onClick} value={this.props.value}>
+      <li
+        className="listItems"
+        onClick={this.props.onClick}
+        id={this.props.value.id}
+      >
         {this.props.value.title}
       </li>
     );

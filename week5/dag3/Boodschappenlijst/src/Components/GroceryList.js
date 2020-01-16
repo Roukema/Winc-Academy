@@ -15,7 +15,12 @@ class GroceryList extends Component {
         onClick={this.props.onClick}
       />
     ));
-    return <ul>{groceryListItems}</ul>;
+    return (
+      <div className="groceryList">
+        <h3>Boodschappen</h3>
+        <ul>{groceryListItems}</ul>
+      </div>
+    );
   }
 }
 

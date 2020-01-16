@@ -11,7 +11,12 @@ class ShoppingCart extends Component {
     const groceryListItems = shoppingItemsArray.map(item => (
       <GroceryListItem value={item} key={item.id} onClick={this.handleChange} />
     ));
-    return <ul>{groceryListItems}</ul>;
+    return (
+      <div className="shoppingCart">
+        <h3>Winkelwagen</h3>
+        <ul>{groceryListItems}</ul>
+      </div>
+    );
   }
 }
 export default ShoppingCart;
