@@ -18,6 +18,12 @@ ul {
   margin-bottom: 20px;
 }
 
+.dayview .appointmentCanceled {
+  border: 2px solid red;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
 .dayview .time,
 .dayview .patient {
   height: 30px;
@@ -32,6 +38,14 @@ ul {
 .dayview .patient {
   font-weight: bold;
   background-color: deepskyblue;
+}
+.dayview .appointmentCanceled .patient {
+  font-weight: bold;
+  background-color: red;
+}
+.dayview .appointmentCanceled .patient::after {
+  content: " Afgelast";
+  color: black;
 }
 
 .dayview .dentist,
